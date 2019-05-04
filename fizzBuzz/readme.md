@@ -1,0 +1,1 @@
+There are there are four conditions saw I could make a for if else statements. I also decided to make it into three conditions by simply appending buzz to fizz if it was also divisible by 5
