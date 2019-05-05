@@ -1,0 +1,3 @@
+this is still not being accepted on leetcode but I cant find the problem, it is working wiht the examples I have tried. 
+
+I first tried to turn all the elments into its number, add 1, and then turn it back to an array of digits. This gave an error when very large unmbers where given as input. I then decided to go a different route. I would simply add 1 to the last number and make sure that I carry over. Also there is the posiblility that I need to resize the array.
