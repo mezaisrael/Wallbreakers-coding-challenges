@@ -46,9 +46,10 @@ void append(ListNode* head, int val) {
 
 void displayNode (ListNode* head) {
     ListNode *curr = head;
-    while (head != nullptr)
+    while (curr != nullptr)
     {
         std::cout << curr->val << std::endl;   
+        curr = curr->next;
     }
     
 }
