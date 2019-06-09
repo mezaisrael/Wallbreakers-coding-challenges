@@ -108,4 +108,4 @@ addNode(root2, 2);
 addNode(root2, 6);
 addNode(root2, 1);
 
-console.log(leafSimilar(root,root2));
+// console.log(leafSimilar(root,root2));
