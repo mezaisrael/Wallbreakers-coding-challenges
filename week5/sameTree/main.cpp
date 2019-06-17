@@ -19,8 +19,39 @@ struct TreeNode
 	TreeNode * left;
 	TreeNode * right;
 
-	TreeNode(int _val) : val(_val) {
+	TreeNode(int _val) : val(_val), left(nullptr), right(nullptr) {}
 
+	void printNode() {
+		//if this node is null return
+		if (left) left->printNode();
+
+		std::cout << val << std::endl;
+
+		if (right) right->printNode();
+	}
+
+	void addNode(int val) {
+		if (this->val > val)
+		{
+			std::cout << "going left" << std::endl;
+			//go left
+			if (left)
+			{
+				std::cout << "left is not null" << std::endl;
+				this->left->addNode(val);
+			} else {
+				std::cout << "left is null" << std::endl;
+				left = new TreeNode(val);
+			}
+		} else {
+			//go right
+			std::cout << "going right" << std::endl;
+			if(right) {
+				this->right->addNode(val);
+			} else {
+				right = new TreeNode(val);
+			}
+		}
 	}
 };
 class Tree
@@ -101,7 +132,12 @@ int main(int argc, char const *argv[])
 	othertree.addNode(8);
 	othertree.addNode(2);
 
-	cout << isSameTree(mtree.getRoot(), othertree.getRoot()) << endl;
+	TreeNode root(7);
+	root.addNode(3);
+	root.addNode(9);
+	root.addNode(8);
+
+	root.printNode();
 
 	return 0;
 }
